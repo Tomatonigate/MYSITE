@@ -1,42 +1,301 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>我的网站</title>
+  <title>GOLDEN BETA | Premium Home Renovation in UK</title>
+  <meta name="description" content="GOLDEN BETA - Professional home renovation and interior design services across the UK. Quality craftsmanship, modern design.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --gold: #d4af37;
+      --dark: #1a1a1a;
+      --light: #f8f8f8;
+      --gray: #666;
+    }
+    
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: "Microsoft YaHei", Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background: var(--light);
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--gold); }
+    
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1586023492125-27b2a57e6579?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      margin-top: 15%;
-      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      color: white;
+      padding: 0 5%;
     }
-    h1 {
-      color: #1976d2;
-      font-size: 3em;
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
     }
-    p {
-      font-size: 1.2em;
-      color: #555;
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 30px;
-      background: #1976d2;
+      background: var(--gold);
       color: white;
-      text-decoration: none;
+      padding: 14px 32px;
       border-radius: 50px;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
     }
     .btn:hover {
-      background: #1565c0;
+      background: #b8932a;
+      transform: translateY(-3px);
+    }
+    
+    /* Section */
+    section {
+      padding: 100px 5%;
+    }
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      color: var(--dark);
+    }
+    
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .service-card h3 {
+      margin: 1.5rem 0 1rem;
+      color: var(--gold);
+    }
+    
+    /* Portfolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 250px;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      padding: 2rem 1rem 1rem;
+      transform: translateY(50px);
+      transition: transform 0.3s;
+    }
+    .portfolio-item:hover .overlay {
+      transform: translateY(0);
+    }
+    
+    /* Contact */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item i {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 5%;
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      nav { display: none; }
     }
   </style>
+  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>你好！我是 [你的名字]</h1>
-  <p>这是我的个人网站，欢迎访问！</p>
-  <a href="https://github.com/你的GitHub名" class="btn" target="_blank">查看我的 GitHub</a>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">GOLDEN BETA</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Transform Your Space</h1>
+      <p>Premium home renovation & interior design services across the United Kingdom. From concept to completion.</p>
+      <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Kitchen Renovation</h3>
+        <p>Modern, functional kitchens designed for British homes. Bespoke cabinetry and smart storage solutions.</p>
+      </div>
+      <div class="service-card">
+        <h3>Bathroom Remodeling</h3>
+        <p>Luxury bathroom transformations with premium fixtures and energy-efficient designs.</p>
+      </div>
+      <div class="service-card">
+        <h3>Full Home Refurbishment</h3>
+        <p>Complete property renovations with structural work, plumbing, and electrical upgrades.</p>
+      </div>
+      <div class="service-card">
+        <h3>Interior Design</h3>
+        <p>Custom interior styling that reflects your personality and lifestyle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" style="background:#f5f5f5;">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Victorian Kitchen">
+        <div class="overlay">
+          <h3>Victorian Kitchen - London</h3>
+          <p>Complete restoration with modern appliances</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd0302e1a1a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Bathroom">
+        <div class="overlay">
+          <h3>Contemporary Bathroom - Manchester</h3>
+          <p>Minimalist design with smart lighting</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Loft Conversion">
+        <div class="overlay">
+          <h3>Loft Conversion - Birmingham</h3>
+          <p>Added 2 bedrooms and en-suite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 3rem;">Ready to start your renovation journey? Contact us for a free consultation.</p>
+    
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p><strong>Email</strong><br>
+        <a href="mailto:minchen@goldenbeta.group">minchen@goldenbeta.group</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p><strong>Phone</strong><br>
+        +44 20 1234 5678</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><strong>Coverage</strong><br>
+        London • Manchester • Birmingham • UK Wide</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GOLDEN BETA. All rights reserved. | Professional Home Renovation Services in the UK</p>
+    <p><a href="mailto:minchen@goldenbeta.group">minchen@goldenbeta.group</a></p>
+  </footer>
+
 </body>
 </html>
