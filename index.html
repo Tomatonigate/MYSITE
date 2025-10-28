@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GOLDEN BETA | Premium Home Renovation in UK</title>
-  <meta name="description" content="GOLDEN BETA - Professional home renovation and interior design services across the UK. Quality craftsmanship, modern design.">
+  <title>GOLDEN BETA | Premium Home Renovation in London</title>
+  <meta name="description" content="GOLDEN BETA - Professional home renovation and interior design services in London. Quality craftsmanship, modern design.">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
   <style>
     :root {
       --gold: #d4af37;
+      --gold-dark: #b8932a;
       --dark: #1a1a1a;
       --light: #f8f8f8;
       --gray: #666;
@@ -56,7 +57,7 @@
     /* Hero */
     .hero {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1586023492125-27b2a57e6579?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1586023492125-27b2a57e6579?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,17 +77,32 @@
     }
     .btn {
       display: inline-block;
-      background: var(--gold);
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
       color: white;
-      padding: 14px 32px;
+      padding: 16px 36px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    .btn:hover::before {
+      left: 100%;
     }
     .btn:hover {
-      background: #b8932a;
       transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
     }
     
     /* Section */
@@ -189,6 +205,7 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.8rem; }
       nav { display: none; }
+      .btn { padding: 14px 30px; font-size: 1rem; }
     }
   </style>
   
@@ -210,8 +227,8 @@
   <!-- Hero -->
   <section class="hero">
     <div>
-      <h1>Transform Your Space</h1>
-      <p>Premium home renovation & interior design services across the United Kingdom. From concept to completion.</p>
+      <h1>Transform Your London Home</h1>
+      <p>Premium renovation & interior design services exclusively in Greater London. From concept to completion.</p>
       <a href="#contact" class="btn">Get a Free Quote</a>
     </div>
   </section>
@@ -222,7 +239,7 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>Kitchen Renovation</h3>
-        <p>Modern, functional kitchens designed for British homes. Bespoke cabinetry and smart storage solutions.</p>
+        <p>Modern, functional kitchens with bespoke cabinetry and smart storage solutions.</p>
       </div>
       <div class="service-card">
         <h3>Bathroom Remodeling</h3>
@@ -241,26 +258,26 @@
 
   <!-- Portfolio -->
   <section id="portfolio" style="background:#f5f5f5;">
-    <h2 class="section-title">Recent Projects</h2>
+    <h2 class="section-title">Recent Projects in London</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Victorian Kitchen">
         <div class="overlay">
-          <h3>Victorian Kitchen - London</h3>
+          <h3>Victorian Kitchen - Kensington</h3>
           <p>Complete restoration with modern appliances</p>
         </div>
       </div>
       <div class="portfolio-item">
         <img src="https://images.unsplash.com/photo-1618221195710-dd0302e1a1a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Bathroom">
         <div class="overlay">
-          <h3>Contemporary Bathroom - Manchester</h3>
+          <h3>Contemporary Bathroom - Shoreditch</h3>
           <p>Minimalist design with smart lighting</p>
         </div>
       </div>
       <div class="portfolio-item">
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Loft Conversion">
         <div class="overlay">
-          <h3>Loft Conversion - Birmingham</h3>
+          <h3>Loft Conversion - Notting Hill</h3>
           <p>Added 2 bedrooms and en-suite</p>
         </div>
       </div>
@@ -281,20 +298,20 @@
       <div class="contact-item">
         <i class="fas fa-phone"></i>
         <p><strong>Phone</strong><br>
-        +44 20 1234 5678</p>
+        <a href="tel:+447908739705">+44 7908 739 705</a></p>
       </div>
       <div class="contact-item">
         <i class="fas fa-map-marker-alt"></i>
         <p><strong>Coverage</strong><br>
-        London • Manchester • Birmingham • UK Wide</p>
+        Greater London • All Postcodes</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 GOLDEN BETA. All rights reserved. | Professional Home Renovation Services in the UK</p>
-    <p><a href="mailto:minchen@goldenbeta.group">minchen@goldenbeta.group</a></p>
+    <p>&copy; 2025 GOLDEN BETA. All rights reserved. | Premium Home Renovation in London</p>
+    <p><a href="mailto:minchen@goldenbeta.group">minchen@goldenbeta.group</a> • <a href="tel:+447908739705">+44 7908 739 705</a></p>
   </footer>
 
 </body>
