@@ -4,212 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GOLDEN BETA | Premium Home Renovation in London</title>
-  <meta name="description" content="GOLDEN BETA - Professional home renovation and interior design services in London. Quality craftsmanship, modern design.">
+  <meta name="description" content="GOLDEN BETA - Professional home renovation and interior design services in London and surrounding areas.">
   
-  <!-- Google Fonts HTTPS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome HTTPS (带完整性校验) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    :root {
-      --gold: #d4af37;
-      --gold-dark: #b8932a;
-      --dark: #1a1a1a;
-      --light: #f8f8f8;
-      --gray: #666;
-    }
-    
+    :root { --gold: #d4af37; --gold-dark: #b8932a; --dark: #1a1a1a; --light: #f8f8f8; }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      color: var(--dark);
-      background: var(--light);
-    }
+    body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--dark); background: var(--light); }
     
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-decoration: none;
-    }
-    nav a {
-      margin-left: 2rem;
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+    header { position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    nav a { margin-left: 2rem; text-decoration: none; color: var(--dark); font-weight: 600; transition: color 0.3s; }
     nav a:hover { color: var(--gold); }
     
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 0 5%;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-      color: white;
-      padding: 16px 36px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: 0.5s;
-    }
+    .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 5%; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem; }
+    
+    .btn { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: white; padding: 16px 36px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3); transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s; }
     .btn:hover::before { left: 100%; }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
-    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4); }
     
     section { padding: 100px 5%; }
-    .section-title {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      margin-bottom: 3rem;
-      color: var(--dark);
-    }
+    .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 3rem; color: var(--dark); }
     
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .service-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform 0.3s;
-    }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .service-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s; }
     .service-card:hover { transform: translateY(-10px); }
-    .service-card h3 {
-      margin: 1.5rem 0 1rem;
-      color: var(--gold);
-    }
+    .service-card h3 { margin: 1.5rem 0 1rem; color: var(--gold); }
     
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .portfolio-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      height: 250px;
-    }
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .portfolio-item { position: relative; overflow: hidden; border-radius: 12px; height: 250px; }
+    .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
     .portfolio-item:hover img { transform: scale(1.1); }
-    .overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.8));
-      color: white;
-      padding: 2rem 1rem 1rem;
-      transform: translateY(50px);
-      transition: transform 0.3s;
-    }
+    .overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 2rem 1rem 1rem; transform: translateY(50px); transition: transform 0.3s; }
     .portfolio-item:hover .overlay { transform: translateY(0); }
     
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .contact-item {
-      text-align: center;
-    }
-    .contact-item i {
-      font-size: 2rem;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
+    .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .contact-item { text-align: center; }
+    .contact-item i { font-size: 2rem; color: var(--gold); margin-bottom: 1rem; }
     
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 3rem 5%;
-    }
+    footer { background: var(--dark); color: white; text-align: center; padding: 3rem 5%; }
     footer a { color: var(--gold); text-decoration: none; }
     
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.8rem; }
-      nav { display: none; }
-      .btn { padding: 14px 30px; font-size: 1rem; }
-    }
+    @media (max-width: 768px) { .hero h1 { font-size: 2.8rem; } nav { display: none; } .btn { padding: 14px 30px; font-size: 1rem; } }
   </style>
 </head>
 <body>
 
   <header>
     <a href="#" class="logo">GOLDEN BETA</a>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <nav><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
   </header>
 
   <section class="hero">
     <div>
       <h1>Transform Your London Home</h1>
-      <p>Premium renovation & interior design services exclusively in Greater London. From concept to completion.</p>
+      <p>Premium renovation & interior design services in Greater London and surrounding areas. From concept to completion.</p>
       <a href="#contact" class="btn">Get a Free Quote</a>
     </div>
   </section>
@@ -217,49 +73,19 @@
   <section id="services">
     <h2 class="section-title">Our Services</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <h3>Kitchen Renovation</h3>
-        <p>Modern, functional kitchens with bespoke cabinetry and smart storage solutions.</p>
-      </div>
-      <div class="service-card">
-        <h3>Bathroom Remodeling</h3>
-        <p>Luxury bathroom transformations with premium fixtures and energy-efficient designs.</p>
-      </div>
-      <div class="service-card">
-        <h3>Full Home Refurbishment</h3>
-        <p>Complete property renovations with structural work, plumbing, and electrical upgrades.</p>
-      </div>
-      <div class="service-card">
-        <h3>Interior Design</h3>
-        <p>Custom interior styling that reflects your personality and lifestyle.</p>
-      </div>
+      <div class="service-card"><h3>Kitchen Renovation</h3><p>Modern, functional kitchens with bespoke cabinetry and smart storage solutions.</p></div>
+      <div class="service-card"><h3>Bathroom Remodeling</h3><p>Luxury bathroom transformations with premium fixtures and energy-efficient designs.</p></div>
+      <div class="service-card"><h3>Full Home Refurbishment</h3><p>Complete property renovations with structural work, plumbing, and electrical upgrades.</p></div>
+      <div class="service-card"><h3>Interior Design</h3><p>Custom interior styling that reflects your personality and lifestyle.</p></div>
     </div>
   </section>
 
   <section id="portfolio" style="background:#f5f5f5;">
     <h2 class="section-title">Recent Projects in London</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Victorian Kitchen">
-        <div class="overlay">
-          <h3>Victorian Kitchen</h3>
-          <p>Complete restoration with modern appliances</p>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern Bathroom">
-        <div class="overlay">
-          <h3>Contemporary Bathroom</h3>
-          <p>Minimalist design with smart lighting</p>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Loft Conversion">
-        <div class="overlay">
-          <h3>Loft Conversion</h3>
-          <p>Added 2 bedrooms and en-suite</p>
-        </div>
-      </div>
+      <div class="portfolio-item"><img src="https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Victorian Kitchen"><div class="overlay"><h3>Victorian Kitchen</h3><p>Complete restoration with modern appliances</p></div></div>
+      <div class="portfolio-item"><img src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern Bathroom"><div class="overlay"><h3>Contemporary Bathroom</h3><p>Minimalist design with smart lighting</p></div></div>
+      <div class="portfolio-item"><img src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Loft Conversion"><div class="overlay"><h3>Loft Conversion</h3><p>Added 2 bedrooms and en-suite</p></div></div>
     </div>
   </section>
 
@@ -267,29 +93,53 @@
     <h2 class="section-title">Get in Touch</h2>
     <p style="text-align:center; max-width:700px; margin:0 auto 3rem;">Ready to start your renovation journey? Contact us for a free consultation.</p>
     
+    <!-- 联系表单 -->
+    <form action="https://formspree.io/f/xdknpwkp" method="POST" style="max-width:600px;margin:0 auto;background:white;padding:2rem;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+      <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;border-radius:8px;">
+      <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;border-radius:8px;">
+      <input type="tel" name="phone" placeholder="Your Phone" style="width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;border-radius:8px;">
+      <textarea name="message" placeholder="Tell us about your project..." required style="width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;border-radius:8px;height:120px;"></textarea>
+      <button type="submit" class="btn" style="width:100%;margin-top:10px;">Send Message</button>
+    </form>
+
+    <!-- Google 地图 -->
+    <div style="margin:3rem 0;overflow:hidden;border-radius:12px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.778!2d-0.1276!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMzAnMjkuMCJOIDDCsDA3JzM5LjQiVwo!5e0!3m2!1sen!2suk!4v1698765432100!5m2!1sen!2suk" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
     <div class="contact-info">
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
         <p><strong>Email</strong><br>
-        <a href="mailto:minchen@goldenbeta.group">minchen@goldenbeta.group</a></p>
+        <a href="mailto:info@goldenbeta.group">info@goldenbeta.group</a></p>
       </div>
       <div class="contact-item">
         <i class="fas fa-phone"></i>
         <p><strong>Phone</strong><br>
-        <a href="tel:+447908739705">+44 7908 739 705</a></p>
+        <a href="tel:+447908739705">+44 7908 739 705</a><br>
+        <a href="tel:+447835789362">+44 7835 789 362</a></p>
       </div>
       <div class="contact-item">
         <i class="fas fa-map-marker-alt"></i>
         <p><strong>Coverage</strong><br>
-        Greater London • All Postcodes</p>
+        Greater London & Surrounding Areas</p>
       </div>
     </div>
   </section>
 
   <footer>
     <p>© 2025 GOLDEN BETA. All rights reserved. | Premium Home Renovation in London</p>
-    <p><a href="mailto:minchen@goldenbeta.group">minchen@goldenbeta.group</a> • <a href="tel:+447908739705">+44 7908 739 705</a></p>
+    <p><a href="mailto:info@goldenbeta.group">info@goldenbeta.group</a> • 
+       <a href="tel:+447908739705">+44 7908 739 705</a> • 
+       <a href="tel:+447835789362">+44 7835 789 362</a></p>
   </footer>
+
+  <!-- WhatsApp 浮动按钮 -->
+  <a href="https://wa.me/447908739705?text=Hi%20GOLDEN%20BETA%2C%20I'd%20like%20a%20free%20quote!" 
+     style="position:fixed;bottom:20px;right:20px;background:#25d366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:1000;"
+     target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
